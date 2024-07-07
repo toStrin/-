@@ -2,7 +2,9 @@ package com.sky.service;
 
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
+import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.result.PageResult;
 
 public interface EmployeeService {
 
@@ -20,4 +22,15 @@ public interface EmployeeService {
      * @return
      */
     void save(EmployeeDTO employeeDTO);
+
+    PageResult page(EmployeePageQueryDTO e);
+
+    void banEmp(Integer status, long id);
+
+    Employee getById(Long id);
+
+    void updateById(EmployeeDTO employeeDTO);
+
+
+
 }
